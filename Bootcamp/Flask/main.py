@@ -3,4 +3,4 @@
 # such as sites, apps, etc.
 # Framework Flask creates web apps based on Python, HTML, CSS, JavaScript
 
-print('Hello world');
+# Continue from 12:26
