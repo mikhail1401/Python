@@ -15,7 +15,14 @@ app = Flask(__name__)   # Creating an instance of Flask class
 def main():     # the view fucntion that will be called when a user accesses this route
     return '<h1>Hello, world!</h1>'
 
-if __name__ == '__main__': # if the programm is launched from the main file app.py
+@app.route('/info')
+def info():
+    return '<h1>I was created by GeekBrains</h1>'
+
+@app.route('/sum/<x>/<y>')
+def calculate(x, y):
+    return f'<h1>{x} + {y} = {int(x) + int(y)}<h1>'
+
+if __name__ == '__main__': # if the programm is launched from the main, not imported file (e.g app.py)
     app.run()              # then the app will run
 
-# Continue from 34:30
