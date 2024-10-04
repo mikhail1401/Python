@@ -1,5 +1,7 @@
 import cv2
 
+face_cascades = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
+
 cap = cv2.VideoCapture(0)   # 0 is the first camera, webcamera in my case
 
 while True:
@@ -8,3 +10,4 @@ while True:
 
     if cv2.waitKey(1) & 0xff == ord('q'):     # the frame will update every 1 milisecond
         break   # Exit loop if 'q' is pressed
+
