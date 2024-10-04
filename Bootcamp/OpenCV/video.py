@@ -11,8 +11,10 @@ while True:
     # success is a boolean variable that indicates whether the frame was captures successfully
     # frame holds the actual image data of the captured frame
     success, frame = cap.read()
+
     # creating a window titled "Webcam" and displaying the original frame
     cv2.imshow("Webcam", frame)
+
     # making the frame mage gray to detect the face easier
     img_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     # finding the coordinates of the face(s)
