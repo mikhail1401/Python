@@ -1,0 +1,18 @@
+<!--the following row ingerits tamplate and style of the base.html page-->
+{% extends 'base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+<!--block is part of this page only. The name content is NOT part of the syntax, you can use any name-->
+{% block content %}
+<ol>
+{% for name in names %}
+    <li>{{name}}</li>
+{% endfor %}
+</ol>
+{% endblock %}
+</body>
+</html>

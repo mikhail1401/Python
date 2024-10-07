@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <!--<link href="style/st.css" rel="stylesheet">-->
+</head>
+<style>
+    html{
+    background-color: #00ff00;}
+</style>
+<body>
+<!--block part won't be inherited by other pages. Its part of this page only, but not part of this template-->
+{% block content %}
+<h1>Happy to see everyone</h1>
+<a href='/students'><button>Список всех студентов</button></a>
+{% endblock %}
+</body>
+</html>
