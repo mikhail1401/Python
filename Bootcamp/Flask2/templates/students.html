@@ -1,4 +1,4 @@
-<!--the following row ingerits tamplate and style of the base.html page-->
+<!--the following row inherits template and style of the base.html page-->
 {% extends 'base.html' %}
 <html lang="en">
 <head>
@@ -6,13 +6,22 @@
     <title>{{ title }}</title>
 </head>
 <body>
-<!--block is part of this page only. The name content is NOT part of the syntax, you can use any name-->
-{% block content %}
-<ol>
-{% for name in names %}
-    <li>{{name}}</li>
-{% endfor %}
-</ol>
-{% endblock %}
+    <!--block is part of this page only. The name content is NOT part of the syntax, you can use any name-->
+    {% block content %}
+        <a href='/'><button>На Главную</button></a>
+        <h1>Список студентов</h1>
+            <ol>
+            {% for name in names %}
+                <li>{{name}}</li>
+                    {% if name == "Маруся" or name == "София" %}
+                    <p>Очень хорошая студентка</p>
+                    {% elif name == "Дмитрий" %}
+                    <p>Надо подтянуть</p>
+                    {% else %}
+                    <p>Обычный студент</p>
+                    {% endif %}
+            {% endfor %}
+            </ol>
+    {% endblock %}
 </body>
 </html>

@@ -10,10 +10,12 @@
     background-color: #00ff00;}
 </style>
 <body>
-<!--block part won't be inherited by other pages. Its part of this page only, but not part of this template-->
-{% block content %}
-<h1>Happy to see everyone</h1>
-<a href='/students'><button>Список всех студентов</button></a>
-{% endblock %}
+    <!--block part won't be inherited by other pages. Its part of this page only, but not part of this template-->
+    {% block content %}
+        <h1>Happy to see everyone</h1>
+        <h2>Especially {{author_name}}</h2>
+        <a href='/students'><button>Список всех студентов</button></a>
+        <a href='/test_super'><button>Как работает super() в jinja</button></a>
+    {% endblock %}
 </body>
 </html>

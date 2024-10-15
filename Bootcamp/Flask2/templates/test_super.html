@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+<body>
+    {% block content %}
+    <h3>Content from the main page starts below</h3>
+        {{ super() }}   <!--This will include the block content from base.html -->
+    <h3>Content from the main page ends above.</h3>
+    <a href='/'>На Главную</a>
+    {% endblock %}
+</body>
